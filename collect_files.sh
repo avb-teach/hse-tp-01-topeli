@@ -14,7 +14,7 @@ copy()
 	fi
 	for i in "$input_dir"/*;
 	do if [ -d "$i" ]; then copy "$i" "$output_dir" "$max_depth" $((depth + 1))
-	else
+	elif [ -f "$i" ]; then
 	c=1
 	file=$(basename "$i")
 	output="$output_dir/$file"
