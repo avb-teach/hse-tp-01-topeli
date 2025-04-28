@@ -1,5 +1,4 @@
 #!/bin/bash
-fi
 input_dir="$1"
 output_dir="$2"
 max_depth="0"
@@ -11,11 +10,11 @@ copy()
 	output_dir="$2"
 	max_depth="$3"
 	depth="$4"
-	if [[ "$max_depth" -ne "0" && "$depth" -ge "$max_depth" ]]; then return
+	if [ "$max_depth" -ne "0" ] && [ "$depth" -ge "$max_depth" ]; then return
 	fi
 	for i in "$input_dir"/*;
 	do if [ -d "$i" ]; then copy "$i" "$output_dir" "$max_depth" $((depth + 1))
-	else then 
+	else
 	c=1
 	file=$(basename "$i")
 	output="$output_dir/$file"
