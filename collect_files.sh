@@ -1,7 +1,5 @@
 #!/bin/bash
 fi
-
-
 input_dir="$1"
 output_dir="$2"
 max_depth="0"
